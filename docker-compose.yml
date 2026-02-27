@@ -1,12 +1,13 @@
 services:
   web:
+    image: ghcr.io/digital-xpress/public-website:latest
     build:
       context: .
       dockerfile: Dockerfile
       target: production
     container_name: digitalxpress-website
     ports:
-      - "80:80"
+      - "3003:80"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost/robots.txt"]
