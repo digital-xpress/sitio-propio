@@ -1,0 +1,53 @@
+---
+const faqs = [
+  {
+    question: '¿Hay algún costo de instalación inicial?',
+    answer:
+      'No, en DigitalXpress creemos en la transparencia. El precio que ves es el precio final. No cobramos tarifas de instalación ni "setup fees". Tu primera mensualidad cubre todo el desarrollo inicial de tu sitio.',
+  },
+  {
+    question: '¿Puedo cancelar en cualquier momento?',
+    answer:
+      '¡Absolutamente! No creemos en ataduras. Si decides que el servicio no es para ti, puedes cancelar tu suscripción en cualquier momento sin penalizaciones. Tu sitio permanecerá activo hasta el final del periodo facturado.',
+  },
+  {
+    question: '¿Puedo pagar en mi moneda local (CLP/ARS)?',
+    answer:
+      'Sí, aunque nuestros precios base están en dólares para estandarización, procesamos pagos en moneda local tanto para Chile (CLP) como para Argentina (ARS) utilizando la tasa de cambio oficial del día, facilitando la facturación para tu empresa.',
+  },
+  {
+    question: '¿Qué incluyen los "cambios ilimitados"?',
+    answer:
+      'Incluyen actualizaciones de texto, cambios de imágenes, publicaciones de blog, nuevos productos en catálogo y ajustes menores de diseño. Queremos que tu web esté siempre viva y actualizada sin cobrarte extra por cada pequeña modificación.',
+  },
+];
+---
+
+<section id="preguntas" class="w-full py-16 lg:py-24 bg-background-dark border-t border-slate-800">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-12">
+      <h2 class="text-blue-400 font-bold text-sm tracking-widest uppercase mb-2">FAQ</h2>
+      <h3 class="text-3xl md:text-4xl font-black text-white">Preguntas Frecuentes</h3>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      {faqs.map((faq) => (
+        <div class="group rounded-xl border border-slate-800 bg-card-dark overflow-hidden transition-colors hover:border-slate-700">
+          <details class="group p-6">
+            <summary class="flex cursor-pointer items-center justify-between font-medium text-text-light marker:content-none focus:outline-none list-none">
+              <span class="text-base lg:text-lg pr-4">{faq.question}</span>
+              <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary shrink-0">
+                expand_more
+              </span>
+            </summary>
+            <div class="mt-4 text-text-muted leading-relaxed text-sm lg:text-base">
+              {faq.answer}
+            </div>
+          </details>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

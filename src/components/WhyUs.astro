@@ -1,0 +1,84 @@
+---
+const features = [
+  {
+    icon: 'payments',
+    title: 'Sin pago inicial',
+    description: 'Comienza tu presencia digital sin arriesgar capital.',
+  },
+  {
+    icon: 'edit_document',
+    title: 'Cambios ilimitados',
+    description: 'Mantenemos tu contenido siempre fresco y actualizado.',
+  },
+  {
+    icon: 'support_agent',
+    title: 'Soporte cercano',
+    description: 'Hablamos tu idioma y entendemos tu negocio local.',
+  },
+  {
+    icon: 'speed',
+    title: 'Velocidad Premium',
+    description: 'Servidores optimizados para carga instantánea.',
+  },
+];
+
+const benefits = [
+  'Sitios optimizados para móviles y tablets',
+  'Integración con WhatsApp Business',
+  'Certificado SSL de seguridad incluido',
+];
+---
+
+<section class="w-full py-16 lg:py-24 bg-background-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row gap-16 items-center">
+
+      <!-- Feature grid -->
+      <div class="flex-1 order-2 lg:order-1 relative">
+        <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-violet-600/20 rounded-full blur-3xl opacity-30"></div>
+        <div class="relative grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {features.map((feature) => (
+            <div class="bg-card-dark p-6 rounded-xl border border-slate-800 hover:border-slate-700 shadow-md flex items-start gap-4 transition-colors">
+              <div class="text-blue-500 shrink-0">
+                <span class="material-symbols-outlined">{feature.icon}</span>
+              </div>
+              <div>
+                <h5 class="font-bold text-white">{feature.title}</h5>
+                <p class="text-sm text-text-muted mt-1">{feature.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Text column -->
+      <div class="flex-1 order-1 lg:order-2">
+        <h2 class="text-blue-400 font-bold text-sm tracking-widest uppercase mb-2">Ventajas Competitivas</h2>
+        <h3 class="text-3xl md:text-4xl font-black text-white leading-tight mb-6">
+          Por qué elegir <br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">DigitalXpress</span>
+        </h3>
+        <p class="text-lg text-text-muted mb-8">
+          Entendemos los desafíos de las PyMEs en Latinoamérica. Nuestra tecnología y modelo de servicio están diseñados para eliminar la fricción técnica y financiera.
+        </p>
+        <ul class="space-y-4">
+          {benefits.map((benefit) => (
+            <li class="flex items-center gap-3 text-text-light">
+              <span class="material-symbols-outlined text-blue-500">check_circle</span>
+              <span>{benefit}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="mt-8">
+          <a
+            class="inline-flex items-center text-blue-400 font-bold hover:text-blue-300 transition-colors hover:underline"
+            href="#como-funciona"
+          >
+            Conoce más sobre nuestra tecnología
+            <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

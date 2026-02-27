@@ -1,0 +1,156 @@
+---
+const avatars = [
+  {
+    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBrZtT9pIqwvzmxqMB8fpyVYB8ZAsuXUWSD7f8RWB00Mi_UmHaaPQbn0hfA18WFId2YnTZ69yXvFydJyd4djXBHbfYCxvTZcYNcnTiY66wcx7hnq5WH82nKxLU9GXJcJuHZuS9Gb2pEVNZjqRNW7BktqF8iP4BlT4g9kD38gHPzpHK_2GAIvO2zlkOpaUi9jJ3R8x1qQncdk8vGNz2p7N0NRia3V1UuYGPoJkK7BKFLlq0-ri-qpVA2Cmi6TUvKr7wzSw2kfP3zo5w',
+    alt: 'Retrato de una mujer sonriente',
+  },
+  {
+    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDTF3yO5LsLQatXNjcCWEgJc3WMuVjm07JMSdSdPp-inv7lPzl6Y3e1CN7sOXYLH62IOYIl3IbzQIFP843bG2ah12U3lXABjOqFpcROCZ83auOYLOWsdoSI0XV6AiA46BZG13RYhiC20zETjM3YDKjSjpZoz6mRopilGZ91VBEo0KRfVChbtitZiVLesY3eFSx32Q1p_UcOe3Pp0u6IyQkG-IQ_f8uiCBAYA-ClnQR93Ifmqu2Wabcnp_xzqMUJNrzlyukPMyDF41U',
+    alt: 'Retrato de un hombre sonriente',
+  },
+  {
+    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAwhg1zI4nVWn4BlfcVJ1sSmLBEWEiEjqeMr0ZyJyxP4p4IFHR31X0Am0iyi7pqYOpXT8Ci8rw7YhbUIke18nfAiwkZBqni2Tgdi2yDXgljyOUF_Q_-VoStFowVZHqVXI6mXqVg9t6747FqRUHZU1TMPUymob85gwmZvXJsvpEsu8GMnZeb-SubdPgDl2H8L2M7rlL6h6kWOgTosCIxTeQwlUvJnpVqrNYDlumnQpRswf9RHC8o7HzQ9T8m1tS63fUcl8zK4wiFhlc',
+    alt: 'Retrato de un empresario',
+  },
+];
+---
+
+<section class="w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 mx-auto">
+  <div class="flex flex-col gap-12 lg:flex-row lg:items-center">
+
+    <!-- Text Column -->
+    <div class="flex flex-col gap-8 flex-1 lg:max-w-xl">
+      <div class="flex flex-col gap-4">
+        <span class="inline-flex items-center w-fit px-3 py-1 rounded-full bg-blue-900/30 border border-blue-800 text-blue-300 text-xs font-bold uppercase tracking-wider">
+          Agencias Digitales 2.0
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white">
+          Tu sitio web profesional, <span class="text-gradient">listo antes de que lo pidas</span>
+        </h1>
+        <p class="text-lg text-text-muted font-normal leading-relaxed max-w-lg">
+          Sin costo inicial. Modelo por suscripción. Especial para PyMEs en Chile y Argentina que buscan crecer sin complicaciones técnicas.
+        </p>
+      </div>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="#como-funciona"
+          class="flex items-center justify-center h-12 px-8 rounded-lg bg-gradient-primary hover:brightness-110 text-white font-bold transition-all shadow-lg shadow-blue-600/20"
+        >
+          Ver mi propuesta
+        </a>
+        <a
+          href="#planes"
+          class="flex items-center justify-center h-12 px-8 rounded-lg border border-slate-700 bg-transparent hover:bg-slate-800 text-text-light font-bold transition-all"
+        >
+          Ver Planes
+        </a>
+      </div>
+
+      <!-- Social proof -->
+      <div class="flex items-center gap-4 pt-2">
+        <div class="flex -space-x-3">
+          {avatars.map((avatar) => (
+            <img
+              alt={avatar.alt}
+              class="w-10 h-10 rounded-full border-2 border-background-dark object-cover"
+              src={avatar.src}
+              width="40"
+              height="40"
+            />
+          ))}
+        </div>
+        <p class="text-sm font-medium text-text-muted">
+          <span class="text-white font-bold">500+</span> empresas confían en nosotros
+        </p>
+      </div>
+    </div>
+
+    <!-- Image Column (slideshow) -->
+    <div class="flex-1 w-full min-h-[300px] lg:min-h-[520px] relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/10 group border border-slate-800">
+      <div class="absolute inset-0 bg-gradient-to-tr from-background-dark/80 to-transparent z-10"></div>
+
+      <!-- Slides -->
+      <div id="hero-slideshow" class="relative w-full h-full min-h-[300px] lg:min-h-[520px]">
+        <img data-slide src="/4clover.png"     alt="Sitio web de 4Clover Technology"          class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" width="800" height="500" />
+        <img data-slide src="/aledovidio.png"  alt="Sitio web de Dra. Alejandra D'Ovidio"     class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" width="800" height="500" />
+        <img data-slide src="/dinovatio.png"   alt="Sitio web de Dinovatio"                   class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" width="800" height="500" />
+        <img data-slide src="/grupogamu.png"   alt="Sitio web de Grupo GAMU"                  class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" width="800" height="500" />
+      </div>
+
+      <!-- Dot indicators -->
+      <div class="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+        <button data-dot="0" class="hero-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300" aria-label="Imagen 1"></button>
+        <button data-dot="1" class="hero-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300" aria-label="Imagen 2"></button>
+        <button data-dot="2" class="hero-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300" aria-label="Imagen 3"></button>
+        <button data-dot="3" class="hero-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300" aria-label="Imagen 4"></button>
+      </div>
+
+      <!-- Floating metric card -->
+      <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-900/80 backdrop-blur-md border border-slate-700 z-20 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+        <div class="flex items-center gap-4">
+          <div class="bg-blue-500/20 p-2 rounded-lg text-blue-400">
+            <span class="material-symbols-outlined">trending_up</span>
+          </div>
+          <div>
+            <p class="text-xs text-text-muted uppercase font-semibold">Llega a público que no te conoce</p>
+            <p class="text-white font-bold text-lg">+80% en visitas a tu negocio</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function initSlideshow() {
+    const slides = document.querySelectorAll<HTMLImageElement>('.hero-slide');
+    const dots = document.querySelectorAll<HTMLButtonElement>('.hero-dot');
+    let current = 0;
+    let timer: ReturnType<typeof setInterval>;
+
+    function goTo(index: number) {
+      slides[current].classList.remove('opacity-100');
+      slides[current].classList.add('opacity-0');
+      dots[current].classList.remove('bg-white/80', 'w-4');
+      dots[current].classList.add('bg-white/40', 'w-2');
+
+      current = index;
+
+      slides[current].classList.remove('opacity-0');
+      slides[current].classList.add('opacity-100');
+      dots[current].classList.remove('bg-white/40', 'w-2');
+      dots[current].classList.add('bg-white/80', 'w-4');
+    }
+
+    function next() {
+      goTo((current + 1) % slides.length);
+    }
+
+    function startTimer() {
+      timer = setInterval(next, 3500);
+    }
+
+    function resetTimer() {
+      clearInterval(timer);
+      startTimer();
+    }
+
+    // Init first slide
+    goTo(0);
+    startTimer();
+
+    // Dot clicks
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        goTo(i);
+        resetTimer();
+      });
+    });
+  }
+
+  initSlideshow();
+  document.addEventListener('astro:after-swap', initSlideshow);
+</script>

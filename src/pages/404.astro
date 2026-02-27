@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Página no encontrada - DigitalXpress" description="La página que buscas no existe.">
+  <main class="flex-grow flex flex-col items-center justify-center min-h-screen text-center px-4">
+    <span class="material-symbols-outlined text-7xl text-blue-500 mb-6">error</span>
+    <h1 class="text-6xl font-black text-white mb-4">404</h1>
+    <p class="text-xl text-text-muted mb-8 max-w-md">
+      La página que buscas no existe o fue movida a otra dirección.
+    </p>
+    <a
+      href="/"
+      class="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-gradient-primary hover:brightness-110 text-white font-bold transition-all shadow-lg shadow-blue-600/20"
+    >
+      Volver al inicio
+    </a>
+  </main>
+</Layout>

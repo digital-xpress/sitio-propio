@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import WhyUs from '../components/WhyUs.astro';
+import Pricing from '../components/Pricing.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+import '../styles/global.css';
+---
+
+<Layout
+  title="DigitalXpress - Tu sitio web profesional, listo antes de que lo pidas"
+  description="Sin costo inicial. Modelo por suscripción. Especial para PyMEs en Chile y Argentina que buscan crecer sin complicaciones técnicas."
+>
+  <Navbar />
+
+  <main class="flex-grow flex flex-col items-center w-full">
+    <Hero />
+    <HowItWorks />
+    <WhyUs />
+    <Pricing />
+    <FAQ />
+    <CTA />
+  </main>
+</Layout>
